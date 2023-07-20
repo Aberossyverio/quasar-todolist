@@ -71,9 +71,3 @@ I'm excited if you want to contribute to Quasar under any form (report bugs, wri
 - It is **required** that you clearly describe the steps necessary to reproduce the issue you are running into. Issues with no clear repro steps will not be triaged. If an issue labeled "need repro" receives no further input from the issue author for more than 5 days, it will be closed.
 
 - If your issue is resolved but still open, don’t hesitate to close it. In case you found a solution by yourself, it could be helpful to explain how you fixed it.
-
-## License
-
-Copyright (c) 2016-present Razvan Stoenescu
-
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
