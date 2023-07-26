@@ -1,17 +1,20 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-subheading">H O L A</div>
+      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <div class="q-gutter-md">
+        <router-link to="/about">
+          <q-btn outline rounded color="white">
+            About
+          </q-btn>
+        </router-link>
+        <router-link to="/todo">
+          <q-btn outline rounded color="white">
+            Todolist App
+          </q-btn>
+        </router-link>
+      </div>
+    </div>
+  </header>
 </template>
-
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'IndexPage'
-})
-</script>
