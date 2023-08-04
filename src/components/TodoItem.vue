@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(todo, index) in todos" :key="index" class="row justify-between">
         <div>
-          <q-checkbox v-model="todo.isDone" color="cyan" @click="done(index)" />
+          <q-checkbox :model-value="todo.isDone" color="cyan" @click="done(index)" />
           <label v-if="todo.isDone">
             <del>{{ todo.activity }}</del>
           </label>

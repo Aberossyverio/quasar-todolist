@@ -14,5 +14,6 @@
   ],
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
-  }
+  },
+  "vue.codeActions.enabled": false
 }

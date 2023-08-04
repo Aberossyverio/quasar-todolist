@@ -24,62 +24,62 @@
 </template>
 
 <script>
-import Todoitem from "./TodoItem.vue";
-import { ref, reactive, toRefs, onMounted, computed } from "vue";
+  import Todoitem from "./TodoItem.vue";
+  import { ref, reactive, toRefs, onMounted, computed } from "vue";
 
-export default {
-  components: { Todoitem },
-  setup() {
-    const todo = ref("");
-    const todos = reactive({
-      list: [],
-    });
-
-    onMounted(() => {
-      const items = localStorage.getItem("todos");
-      todos.list = items ? JSON.parse(items) : [];
-    });
-
-    const totalTODO = computed(() => {
-      return todos.list.filter((list) => list.isDone == true).length;
-    });
-
-    const add = () => {
-      todos.list.unshift({
-        activity: todo.value,
-        isDone: false,
+  export default {
+    components: { Todoitem },
+    setup() {
+      const todo = ref("");
+      const todos = reactive({
+        list: [],
       });
-      todo.value = "";
-      saveToLocalStorage();
-    };
 
-    const deleteTodo = (todoIndex) => {
-      todos.list = todos.list.filter((item, index) => {
-        if (index != todoIndex) {
+      onMounted(() => {
+        const items = localStorage.getItem("todos");
+        todos.list = items ? JSON.parse(items) : [];
+      });
+
+      const totalTODO = computed(() => {
+        return todos.list.filter((list) => list.isDone == true).length;
+      });
+
+      const add = () => {
+        todos.list.unshift({
+          activity: todo.value,
+          isDone: false,
+        });
+        todo.value = "";
+        saveToLocalStorage();
+      };
+
+      const deleteTodo = (todoIndex) => {
+        todos.list = todos.list.filter((item, index) => {
+          if (index != todoIndex) {
+            return item;
+          }
+        });
+        saveToLocalStorage();
+      };
+
+      const doneTodo = (todoIndex) => {
+        todos.list = todos.list.filter((item, index) => {
+          if (index == todoIndex) {
+            item.isDone = !item.isDone;
+          }
+
           return item;
-        }
-      });
-      saveToLocalStorage();
-    };
+        });
+        saveToLocalStorage();
+      };
 
-    const doneTodo = (todoIndex) => {
-      todos.list = todos.list.filter((item, index) => {
-        if (index == todoIndex) {
-          item.isDone = !item.isDone;
-        }
+      const saveToLocalStorage = () => {
+        localStorage.setItem("todos", JSON.stringify(todos.list));
+      };
 
-        return item;
-      });
-      saveToLocalStorage();
-    };
-
-    const saveToLocalStorage = () => {
-      localStorage.setItem("todos", JSON.stringify(todos.list));
-    };
-
-    return { todo, ...toRefs(todos), totalTODO, add, deleteTodo, doneTodo };
-  },
-};
+      return { todo, ...toRefs(todos), totalTODO, add, deleteTodo, doneTodo };
+    },
+  };
 </script>
 
 

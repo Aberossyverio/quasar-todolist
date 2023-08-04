@@ -1,6 +1,6 @@
 <template>
-  <Layout>
-    <div class="row flex-center h-full">
+  <q-page class="row flex-center q-pa-md q-gutter-md q-radius-md">
+    <div class="h-full">
       <q-card class="column flex-center q-pa-md q-gutter-md q-radius-md" style="width: 600px;">
         <a href="https://discordapp.com/users/529983280142090240">
           <img id="image"
@@ -10,9 +10,6 @@
         <p>const interest = ["FrontEnd","UI/UX"];</p>
       </q-card>
     </div>
-  </Layout>
+  </q-page>
 </template>
 
-<script setup>
-import Layout from "../layouts/MainLayout.vue";
-</script>

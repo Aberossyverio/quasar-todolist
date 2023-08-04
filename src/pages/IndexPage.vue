@@ -1,20 +1,21 @@
 <template>
-  <header class="masthead">
-    <div class="container">
-      <div class="masthead-subheading">H O L A</div>
-      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-      <div class="q-gutter-md">
-        <router-link to="/about">
-          <q-btn outline rounded color="white">
-            About
+  <q-page>
+    <header class="masthead">
+      <div class="container">
+        <div class="masthead-subheading">H O L A</div>
+        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+        <div class="q-gutter-md">
+          <q-btn outline rounded color="white" to="/about">
+            PokeDex App
           </q-btn>
-        </router-link>
-        <router-link to="/todo">
-          <q-btn outline rounded color="white">
+          <q-btn outline rounded color="white" to="/todo">
             Todolist App
           </q-btn>
-        </router-link>
+          <q-btn outline rounded color="white" to="/about">
+            About
+          </q-btn>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </q-page>
 </template>

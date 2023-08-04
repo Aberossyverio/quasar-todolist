@@ -1,10 +1,9 @@
 <template>
-  <Layout>
-      <Todo/>
-  </Layout>
+  <q-page>
+    <Todo />
+  </q-page>
 </template>
 
 <script setup>
-import Layout from "../layouts/MainLayout.vue";
 import Todo from "../components/TodoList.vue";
 </script>
