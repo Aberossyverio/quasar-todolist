@@ -47,3 +47,14 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+.pokemon-image img {
+  max-width: 150%;
+  max-height: 100%;
+  transform: scale(2);
+  transition: transform 0.2s;
+}
+
+.pokemon-image:hover img {
+  transform: scale(3);
+}

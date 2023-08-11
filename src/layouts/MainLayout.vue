@@ -16,25 +16,25 @@
     <q-drawer v-model="leftDrawerOpen" side="left" overlay elevated>
       <q-scroll-area class="fit">
         <q-list padding class="menu-list">
-          <q-item clickable v-ripple :to="{name:'index'}">
+          <q-item clickable v-ripple :to="{ name: 'index' }">
             <q-item-section>
               Welcome
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/todo">
+          <q-item clickable v-ripple :to="{ name: 'todolist' }">
             <q-item-section>
               Todolist App
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/poke">
+          <q-item clickable v-ripple :to="{ name: 'pokemon' }">
             <q-item-section>
               Pokedex App
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/about">
+          <q-item clickable v-ripple :to="{ name: 'about' }">
             <q-item-section>
               About
             </q-item-section>

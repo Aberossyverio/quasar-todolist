@@ -14,16 +14,19 @@ const routes = [
 
       {
         path: '/about',
+        name: 'about',
         component:() => import('../pages/AboutPage.vue')
       },
 
       {
         path: '/todo',
+        name: 'todolist',
         component:() => import('../pages/TodoPage.vue')
       },
 
       {
         path: '/poke',
+        name: 'pokemon',
         component:() => import('../pages/PokePage.vue')
       },
 
